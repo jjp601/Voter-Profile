@@ -1,0 +1,134 @@
+.section-search {
+
+    .search {
+        max-width: 60%;
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+      }
+      
+      .searchTerm {
+        width: 100%;
+        border: 3px solid $main;
+        border-right: none;
+        padding: 5px;
+        font-size: $default-font-size;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #9DBFAF;
+      }
+      
+      .searchTerm:focus{
+        color: $color-grey-dark-3;
+      }
+      
+      .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid $main;
+        background: $main;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+      }
+}
+
+.section-homes {
+    grid-column: center-start / center-end;
+    margin: 15rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+    max-width: 1200px;
+
+    .home {
+        background-color: $form-bg;
+        color: $white;
+        box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 3.5rem;
+    
+        &__img {
+            width: 100%;
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+            z-index: 1;
+        }
+    
+        &__like {
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            fill: $color-primary;
+            height: 2.5rem;
+            width: 2.5rem;
+            z-index: 2;
+            justify-self: end;
+            margin: 1rem;
+        }
+    
+        &__name {
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+            justify-self: center;
+            align-self: end;
+            z-index: 3;
+    
+            width: 80%;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 1.25rem;
+            background-color: $color-primary-dark;
+            color: #fff;
+            font-weight: 400;
+            transform: translateY(50%);
+        }
+    
+        &__location,
+        &__rooms {
+            margin-top: 2.5rem;
+        }
+    
+        &__location,
+        &__rooms,
+        &__area,
+        &__price {
+    
+            font-size: 1.5rem;
+            margin-left: 1rem;
+    
+            display: flex;
+    
+            svg {
+                fill: $color-primary-dark;
+                height: 2rem;
+                width: 2rem;
+                margin-right: 1rem;
+            }
+        }
+
+        &__location {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+    
+        &__btn {
+            grid-column: 1 / -1;
+            cursor: pointer;
+            padding: 15px;
+            background: $color-primary-dark;
+            color: $white;
+            font-size: 1.8rem;
+            border: none;
+
+            &:hover {
+                background: $white;
+                color: $color-primary-dark;
+            }
+        }
+    }
+}
+
