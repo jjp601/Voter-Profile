@@ -1,4 +1,5 @@
 .section-search {
+    margin-top: 2.5rem;
 
     .search {
         max-width: 60%;
@@ -9,7 +10,7 @@
       
       .searchTerm {
         width: 100%;
-        border: 3px solid $main;
+        border: 3px solid $color-primary-dark;
         border-right: none;
         padding: 5px;
         font-size: $default-font-size;
@@ -25,8 +26,8 @@
       .searchButton {
         width: 40px;
         height: 36px;
-        border: 1px solid $main;
-        background: $main;
+        border: 1px solid $color-primary-dark;
+        background: $color-primary-dark;
         text-align: center;
         color: #fff;
         border-radius: 0 5px 5px 0;
@@ -37,7 +38,7 @@
 
 .section-homes {
     grid-column: center-start / center-end;
-    margin: 15rem auto;
+    margin: 10rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 7rem;
@@ -47,10 +48,9 @@
         background-color: $form-bg;
         color: $white;
         box-shadow:0 4px 10px 4px rgba($form-bg,.3);
-    
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 3.5rem;
+        grid-row-gap: 1.5rem;
     
         &__img {
             width: 100%;
@@ -76,38 +76,23 @@
             justify-self: center;
             align-self: end;
             z-index: 3;
-    
-            width: 80%;
-            font-size: 1.6rem;
+            
+            width: 100%;
+            font-size: 1.8rem;
             text-align: center;
             padding: 1.25rem;
             background-color: $color-primary-dark;
             color: #fff;
-            font-weight: 400;
-            transform: translateY(50%);
+            font-weight: 700;
         }
     
         &__location,
         &__rooms {
-            margin-top: 2.5rem;
-        }
-    
-        &__location,
-        &__rooms,
-        &__area,
-        &__price {
     
             font-size: 1.5rem;
-            margin-left: 1rem;
+            margin: 0.5rem 2rem;
     
             display: flex;
-    
-            svg {
-                fill: $color-primary-dark;
-                height: 2rem;
-                width: 2rem;
-                margin-right: 1rem;
-            }
         }
 
         &__location {

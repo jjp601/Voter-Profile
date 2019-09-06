@@ -1,5 +1,5 @@
 .header {
-    height: 95vh;
+    height: 6rem;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.8),
@@ -8,23 +8,29 @@
     background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
 
     &__logo-box {
         position: absolute;
-        top: 40px;
         left: 4rem;
+        top: 1rem;
     }
 
     &__logo {
         height: 3.5rem;
     }
-    
-    &__text-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+
+    .user-nav{
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+
+        .nav-link {
+            color: $white;
+            font-size: 1.6rem;
+            margin: 0.75rem 1.25rem;
+            text-decoration: none;
+            
+        }
     }
 }
